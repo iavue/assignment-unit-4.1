@@ -34,10 +34,13 @@ function addNumbers( firstNumber, secondNumber ) {
 console.log('Add both numbers:', addNumbers(5, 7));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( n1, n2, n3 ){
+  console.log('First number:', n1);
+  console.log('Second number:', n2);
+  console.log('Third number:', n3);
+  return n1 * n2 * n3;
 }
-
+console.log('Multiply three numbers:', multiplyThree(2, 4, 6));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
