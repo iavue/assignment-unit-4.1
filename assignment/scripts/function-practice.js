@@ -43,10 +43,10 @@ console.log('Multiply three numbers:', multiplyThree(2, 4, 6));
 function isPositive( number ) {
   console.log('A number for isPositive function:', number);
   if ( number > 0 ){
-    return 'True';
+    return true;
   }
   else{
-    return 'False';
+    return false;
 }
 }
 // Call the function to test each outcome (true & false) 
@@ -62,7 +62,7 @@ function getLast( array ) {
   if (lastItemArray.length > 0){
     return array[lastItemArray.length-1];
   }
-  else if (lastItemArray.length <= 0){
+  else if (lastItemArray.length === 0){
     return 'Undefined';
   }
 }
@@ -73,8 +73,16 @@ console.log('Last item should be pickles:', getLast(lastItemArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  console.log('Testing thingsOnMyDesk array', thingsOnMyDesk);
+  for ( let i=0; i<thingsOnMyDesk.length; i++)
+  if ( array[i] === value){
+    return true;
+  }
+  return false;
 }
+let thingsOnMyDesk = ['paper', 'pens', 'scissor', 'tissue', 'tea', 'hairclip', 'kitkat']
+console.log('Is there tea on my desk - should be true:', find( 'tea', thingsOnMyDesk));
+
 
 // ----------------------
 // Stretch Goals
