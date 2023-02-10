@@ -18,11 +18,9 @@ function helloName( name ) {
   console.log('This is what the name should be:', name);
   return 'Hello, ' + name + '!';
 }
+// Remember to call the function to test
 console.log( helloName( 'Jo' ) );
 console.log( helloName( 'Stacy' ) );
-
-// Remember to call the function to test
-
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -43,28 +41,33 @@ console.log('Multiply three numbers:', multiplyThree(2, 4, 6));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  console.log('A positive number:', number);
+  console.log('A number for isPositive function:', number);
   if ( number > 0 ){
     return 'True';
   }
-  else if ( number < 0 ){
+  else{
     return 'False';
 }
 }
-console.log('Is the number positive:', isPositive(8));
-
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
-
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  console.log('Testing lastItemArray:', lastItemArray)
+  if (lastItemArray.length > 0){
+    return array[lastItemArray.length-1];
+  }
+  else if (lastItemArray.length <= 0){
+    return 'Undefined';
+  }
 }
+let lastItemArray = ['apple', 'orange', 'grapes', 'pickles']
+console.log('Last item should be pickles:', getLast(lastItemArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
