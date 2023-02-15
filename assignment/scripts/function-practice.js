@@ -57,10 +57,10 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
+function getLast( items ) {
   console.log('Testing lastItemArray:', lastItemArray)
   if (lastItemArray.length > 0){
-    return array[lastItemArray.length-1];
+    return items[lastItemArray.length-1];
   }
   else if (lastItemArray.length === 0){
     return 'Undefined';
