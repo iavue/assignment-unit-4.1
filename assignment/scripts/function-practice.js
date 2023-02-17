@@ -59,10 +59,10 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 function getLast( items ) {
   console.log('Testing lastItemArray:', lastItemArray)
-  if (lastItemArray.length > 0){
-    return items[lastItemArray.length-1];
+  if (items.length > 0){
+    return items[items.length-1];
   }
-  else if (lastItemArray.length === 0){
+  else if (items.length === 0){
     return 'Undefined';
   }
 }
